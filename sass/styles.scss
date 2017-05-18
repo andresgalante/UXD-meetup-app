@@ -1,0 +1,116 @@
+//
+// Meetup
+// --------------------------------------------------
+
+
+// Core: variables and mixins
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+// Core: Reset and dependencies
+@import "node_modules/bootstrap/scss/normalize";
+@import "node_modules/bootstrap/scss/print";
+
+// Basics
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+// @import "node_modules/bootstrap/scss/images";
+// @import "node_modules/bootstrap/scss/code";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/forms";
+// @import "pf-forms";
+@import "node_modules/bootstrap/scss/buttons";
+
+// Components
+@import "node_modules/bootstrap/scss/transitions";
+// @import "node_modules/bootstrap/scss/dropdown";
+// @import "node_modules/bootstrap/scss/button-group";
+// @import "node_modules/bootstrap/scss/input-group";
+// @import "node_modules/bootstrap/scss/custom-forms";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+// @import "node_modules/bootstrap/scss/card";
+// @import "node_modules/bootstrap/scss/breadcrumb";
+// @import "node_modules/bootstrap/scss/pagination";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/jumbotron";
+// @import "node_modules/bootstrap/scss/alert";
+// @import "node_modules/bootstrap/scss/progress";
+// @import "node_modules/bootstrap/scss/media";
+// @import "node_modules/bootstrap/scss/list-group";
+@import "node_modules/bootstrap/scss/responsive-embed";
+// @import "node_modules/bootstrap/scss/close";
+
+// Components w/ JavaScript
+// @import "node_modules/bootstrap/scss/modal";
+// @import "node_modules/bootstrap/scss/tooltip";
+// @import "node_modules/bootstrap/scss/popover";
+// @import "node_modules/bootstrap/scss/carousel";
+
+// Utility classes
+@import "node_modules/bootstrap/scss/utilities";
+
+$red: #cc0000;
+// $brand-primary: $red;
+
+.navbar {
+  background-color: $red;
+  box-shadow: 0 2px 3px rgba($black,.3);
+}
+
+main {
+  margin-top: 3.35rem;
+}
+
+h1{
+  box-shadow: 0 1px 2px rgba($black,.3);
+  background: $gray-light;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $font-size-xs;
+  padding: ($grid-gutter-width-base/4) ($grid-gutter-width-base/2);
+  position: sticky;
+  margin: 0;
+  top: 3.35rem;
+  font-weight: normal;
+  strong {
+    font-weight: bold;
+  }
+}
+
+.table {
+  margin: 0;
+  // background: red;
+  // margin: -($grid-gutter-width-base/2);
+  // margin-right: -($grid-gutter-width-base/2);
+  th {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: $gray-lighter;
+    // color: $gray-light;
+    text-transform: uppercase;
+    font-size: $font-size-xs;
+  }
+}
+
+address {
+  margin: 0;
+  font-size: $font-size-xs;
+}
+
+.uxd-time {
+  background: $gray-lightest;
+  font-size: $font-size-xs;
+  width: 20%;
+  padding-right: 0!important;
+}
+
+.uxd-logo {
+text-align: center;
+margin: $spacer*2 $spacer;
+  img {
+    width: 20%;
+  }
+}
