@@ -74,8 +74,8 @@ $font-weight-bold: 900;
     linear-gradient(-45deg, $rh-red-dark 0%, $rh-red-dark 30%, transparent 30%),
     linear-gradient(-45deg, $uxd-shadow-color 30%, transparent 31%),
     linear-gradient(-45deg, $rh-red 0%, $rh-red 35%, transparent 35%),
-    linear-gradient(-45deg, $uxd-shadow-color-light 35%, transparent 36%),
-    linear-gradient(135deg, $rh-red-dark 0%, transparent 30%);
+    linear-gradient(-45deg, $uxd-shadow-color-light 35%, transparent 36%);
+    // linear-gradient( $rh-red-dark 0%, transparent 30%);
 
   box-shadow: 0 2px 3px rgba($black,.3);
 }
