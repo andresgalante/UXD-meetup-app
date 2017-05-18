@@ -2,6 +2,15 @@
 // Meetup
 // --------------------------------------------------
 
+@import url('https://fonts.googleapis.com/css?family=Overpass:300,900');
+
+$font-family-base: "Overpass", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$red: #cc0000;
+
+// $font-weight-light: 100;
+$font-weight-normal: 300;
+$font-weight-bold: 900;
 
 // Core: variables and mixins
 @import "node_modules/bootstrap/scss/variables";
@@ -52,16 +61,17 @@
 // Utility classes
 @import "node_modules/bootstrap/scss/utilities";
 
-$red: #cc0000;
-// $brand-primary: $red;
-
 .navbar {
   background-color: $red;
   box-shadow: 0 2px 3px rgba($black,.3);
 }
 
+.navbar-toggler i {
+  color: rgba(255,255,255,.75);
+}
+
 main {
-  margin-top: 3.35rem;
+  margin-top: 3.3rem;
 }
 
 h1{
@@ -73,25 +83,27 @@ h1{
   padding: ($grid-gutter-width-base/4) ($grid-gutter-width-base/2);
   position: sticky;
   margin: 0;
-  top: 3.35rem;
-  font-weight: normal;
+  top: 3.3rem;
+  // font-weight: $font-weight-light;
   strong {
-    font-weight: bold;
+    font-weight: $font-weight-bold;
   }
+}
+
+strong {
+  font-weight: $font-weight-bold;
 }
 
 .table {
   margin: 0;
-  // background: red;
-  // margin: -($grid-gutter-width-base/2);
-  // margin-right: -($grid-gutter-width-base/2);
   th {
     padding-top: 0;
     padding-bottom: 0;
     background: $gray-lighter;
-    // color: $gray-light;
     text-transform: uppercase;
     font-size: $font-size-xs;
+    font-weight: $font-weight-bold;
+    color: $gray;
   }
 }
 
@@ -108,8 +120,8 @@ address {
 }
 
 .uxd-logo {
-text-align: center;
-margin: $spacer*2 $spacer;
+  text-align: center;
+  margin: $spacer*3 $spacer;
   img {
     width: 20%;
   }
