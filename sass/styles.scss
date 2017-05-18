@@ -19,6 +19,8 @@ $red: $rh-red-light;
 $font-weight-normal: 300;
 $font-weight-bold: 900;
 
+$font-size-xs:   .8rem;
+
 // Core: variables and mixins
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
