@@ -73,10 +73,11 @@ $font-size-xs:   .8rem;
 .navbar {
   background-color: $rh-red-light;
   background-image:
+    linear-gradient(-45deg, transparent 29%, $uxd-shadow-color 30%, transparent 30%),
     linear-gradient(-45deg, $rh-red-dark 0%, $rh-red-dark 30%, transparent 30%),
-    linear-gradient(-45deg, $uxd-shadow-color 30%, transparent 31%),
-    linear-gradient(-45deg, $rh-red 0%, $rh-red 35%, transparent 35%),
-    linear-gradient(-45deg, $uxd-shadow-color-light 35%, transparent 36%);
+    linear-gradient(-45deg, transparent 34%, $uxd-shadow-color 35%, transparent 35%),
+    linear-gradient(-45deg, $rh-red 0%, $rh-red 35%, transparent 35%);
+
     // linear-gradient( $rh-red-dark 0%, transparent 30%);
 
   box-shadow: 0 2px 3px rgba($black,.3);
