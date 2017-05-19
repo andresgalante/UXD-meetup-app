@@ -27,10 +27,29 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script>
+    function scrollToToday() {
+      var day1 = new Date(2017, 6-1, 5);
+      var day2 = new Date(2017, 6-1, 6);
+      var day3 = new Date(2017, 6-1, 7);
+      var day4 = new Date(2017, 6-1, 8);
+      var today = new Date();
+      // var today = new Date(2017, 6-1, 7);
+      console.log('today', today.toISOString().slice(0,10));
+      var scrollDate = today <= day1 ? day1
+                : today >= day4 ? day4
+                : today;
+      var id = scrollDate.toISOString().slice(0,10);
+      console.log('scrollDate', id);
+      window.setTimeout(function() {
+        document.getElementById(id).scrollIntoView();
+      },0)
+    }
+  </script>
 
   <script src="js/addtohomescreen.min.js"></script>
 </head>
-<body onload="addToHomescreen({debug: true, logging:true, displayPace: 0});">
+<body onload="addToHomescreen({debug: true, logging:true, displayPace: 0}); scrollToToday()">
 
   <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,16 +62,16 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav mr-auto mt-2 mt-md-0">
         <li class="nav-item">
-          <a class="nav-link" href="#day1"><strong>Day 1</strong> Monday June 5th</a>
+          <a class="nav-link" href="#2017-06-05"><strong>Day 1</strong> Monday June 5th</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#day2"><strong>Day 2</strong> Tuesday June 6th</a>
+          <a class="nav-link" href="#2017-06-06"><strong>Day 2</strong> Tuesday June 6th</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#day3"><strong>Day 3</strong> Wednesday June 7th</a>
+          <a class="nav-link" href="#2017-06-07"><strong>Day 3</strong> Wednesday June 7th</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#day4"><strong>Day 4</strong> Thursday June 8th</a>
+          <a class="nav-link" href="#2017-06-08"><strong>Day 4</strong> Thursday June 8th</a>
         </li>
       </ul>
     </div>
@@ -60,7 +79,7 @@
 
   <main>
 
-    <section id="day1">
+    <section id="2017-06-05">
       <h1><strong>Day 1</strong> Monday June 5th</h1>
       <table class="table table-bordered">
         <!-- table-responsive -->
@@ -132,7 +151,7 @@
     </section>
 
 
-    <section id="day2">
+    <section id="2017-06-06">
       <h1><strong>Day 2</strong> Tuesday June 6th</h1>
       <table class="table table-bordered">
         <thead>
@@ -345,7 +364,7 @@
 
 
 
-    <section id="day3">
+    <section id="2017-06-07">
       <h1><strong>Day 3</strong> Wednesday June 7th</h1>
       <table class="table table-bordered">
         <thead>
@@ -478,7 +497,7 @@
     </section>
 
 
-    <section id="day4">
+    <section id="2017-06-08">
       <h1><strong>Day 4</strong> Thursday June 8th</h1>
       <table class="table table-bordered">
         <!-- table-responsive -->
