@@ -6,23 +6,23 @@
   "background_color": "#820000",
   "description": "UXD Meetup 2017 schedule",
   "icons": [{
-    "src": "https://cdn.rawgit.com/andresgalante/UXD-meetup-app/7bd3e2ef/img/48.png",
+    "src": "https://raw.githubusercontent.com/andresgalante/UXD-meetup-app/master/img/48.png",
     "sizes": "48x48",
     "type": "image/png"
   }, {
-    "src": "https://cdn.rawgit.com/andresgalante/UXD-meetup-app/7bd3e2ef/img/72.png",
+    "src": "https://raw.githubusercontent.com/andresgalante/UXD-meetup-app/master/img/72.png",
     "sizes": "72x72",
     "type": "image/png"
   }, {
-    "src": "https://cdn.rawgit.com/andresgalante/UXD-meetup-app/7bd3e2ef/img/96.png",
+    "src": "https://raw.githubusercontent.com/andresgalante/UXD-meetup-app/master/img/96.png",
     "sizes": "96x96",
     "type": "image/png"
   }, {
-    "src": "https://cdn.rawgit.com/andresgalante/UXD-meetup-app/7bd3e2ef/img/144.png",
+    "src": "https://raw.githubusercontent.com/andresgalante/UXD-meetup-app/master/img/144.png",
     "sizes": "144x144",
     "type": "image/png"
   }, {
-    "src": "https://cdn.rawgit.com/andresgalante/UXD-meetup-app/7bd3e2ef/img/192.png",
+    "src": "https://raw.githubusercontent.com/andresgalante/UXD-meetup-app/master/img/192.png",
     "sizes": "192x192",
     "type": "image/png"
   }]
