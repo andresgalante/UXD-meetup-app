@@ -27,29 +27,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script>
-    function scrollToToday() {
-      var day1 = new Date(2017, 6-1, 5);
-      var day2 = new Date(2017, 6-1, 6);
-      var day3 = new Date(2017, 6-1, 7);
-      var day4 = new Date(2017, 6-1, 8);
-      var today = new Date();
-      // var today = new Date(2017, 6-1, 7);
-      console.log('today', today.toISOString().slice(0,10));
-      var scrollDate = today <= day1 ? day1
-                : today >= day4 ? day4
-                : today;
-      var id = scrollDate.toISOString().slice(0,10);
-      console.log('scrollDate', id);
-      window.setTimeout(function() {
-        document.getElementById(id).scrollIntoView();
-      },0)
-    }
-  </script>
 
   <script src="js/addtohomescreen.min.js"></script>
 </head>
-<body onload="addToHomescreen({debug: true, logging:true, displayPace: 0}); scrollToToday()">
+<body onload="addToHomescreen({debug: true, logging:true, displayPace: 1}); scrollToToday()">
 
   <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -603,6 +584,24 @@
       <img src="img/UXD_logo.svg" alt="Red Hat UXD logo" />
     </div>
   </main>
-
+  <script>
+    function scrollToToday() {
+      var day1 = new Date(2017, 6-1, 5);
+      var day2 = new Date(2017, 6-1, 6);
+      var day3 = new Date(2017, 6-1, 7);
+      var day4 = new Date(2017, 6-1, 8);
+      var today = new Date();
+      // var today = new Date(2017, 6-1, 7);
+      console.log('today', today.toISOString().slice(0,10));
+      var scrollDate = today <= day1 ? day1
+                : today >= day4 ? day4
+                : today;
+      var id = scrollDate.toISOString().slice(0,10);
+      console.log('scrollDate', id);
+      window.setTimeout(function() {
+        document.getElementById(id).scrollIntoView();
+      },0)
+    }
+  </script>
 </body>
 </html>
