@@ -93,12 +93,20 @@ $font-size-xs:   .8rem;
 main {
   margin-top: 3.3rem;
 }
-
+section {
+  &:before {
+    display: block;
+    content: " ";
+    margin-top: -3.3rem;
+    height: 3.3rem; 
+    visibility: hidden;
+  }
+}
 :target:before {
   content:"";
   display:block;
-  height:3.3rem; /* fixed header height*/
-  margin:-3.3rem 0 0; /* negative fixed header height */
+  height: 3.3rem; /* fixed header height*/
+  margin: -3.3rem 0 0; /* negative fixed header height */
 }
 
 h1{
