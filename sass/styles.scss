@@ -10,7 +10,7 @@ $rh-red-light: #CC0000;
 $rh-red: #A30000;
 $rh-red-dark: #820000;
 
-$uxd-shadow-color-light: rgba(0,0,0,.15);
+$uxd-shadow-color-light: rgba(0,0,0,.1);
 $uxd-shadow-color: rgba(0,0,0,.3);
 
 $red: $rh-red-light;
@@ -73,10 +73,10 @@ $font-size-xs:   .8rem;
 .navbar {
   background-color: $rh-red-light;
   background-image:
-    linear-gradient(-45deg, transparent 29%, $uxd-shadow-color 30%, transparent 30%),
-    linear-gradient(-45deg, $rh-red-dark 0%, $rh-red-dark 30%, transparent 30%),
-    linear-gradient(-45deg, transparent 34%, $uxd-shadow-color 35%, transparent 35%),
-    linear-gradient(-45deg, $rh-red 0%, $rh-red 35%, transparent 35%);
+    linear-gradient(-45deg, transparent 5.8rem, $uxd-shadow-color 6rem, transparent 6rem),
+    linear-gradient(-45deg, $rh-red-dark 0%, $rh-red-dark 6rem, transparent 6rem),
+    linear-gradient(-45deg, transparent 6.8rem, $uxd-shadow-color 7rem, transparent 7rem),
+    linear-gradient(-45deg, $rh-red 0%, $rh-red 7rem, transparent 7rem);
 
     // linear-gradient( $rh-red-dark 0%, transparent 30%);
 
@@ -98,7 +98,7 @@ section {
     display: block;
     content: " ";
     margin-top: -3.3rem;
-    height: 3.3rem; 
+    height: 3.3rem;
     visibility: hidden;
   }
 }
@@ -115,11 +115,18 @@ h1{
   color: $white;
   text-transform: uppercase;
   font-size: $font-size-xs;
-  padding: ($grid-gutter-width-base/4) ($grid-gutter-width-base/2);
+  padding: 2px ($grid-gutter-width-base/2) 0 ($grid-gutter-width-base/2);
   position: sticky;
   margin: 0;
+  min-height: 1.55rem;
   top: 3.3rem;
-  // font-weight: $font-weight-light;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(-45deg, transparent 7.8rem, $uxd-shadow-color 8rem, transparent 8rem),
+    linear-gradient(-45deg, $gray 0%, $uxd-shadow-color-light 8rem, transparent 8rem);
   strong {
     font-weight: $font-weight-bold;
   }
@@ -159,5 +166,36 @@ address {
   margin: $spacer*3 $spacer;
   img {
     width: 20%;
+  }
+}
+
+.fireworks {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: all .2s ease-in;
+  &:hover {
+    transform:  rotateX(180deg) scale(1.1) scaleY(-1);
+    background: $rh-red-light;
+    background-image:
+      linear-gradient($rh-red-light, transparent),
+      radial-gradient(transparent, $rh-red-dark);
+    color: rgba(255,255,255,.8);
+    box-shadow: 0 0 1rem $uxd-shadow-color;
+    text-shadow: 0 0 .2rem $uxd-shadow-color;
+    &:before {
+      content: "YAY! 🍰";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      color: $white;
+      font-weight: $font-weight-bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: $font-size-h2;
+      background-image: radial-gradient(circle, red, transparent);
+    }
   }
 }
